@@ -1,0 +1,133 @@
+/* src/CartModal.css */
+
+.cart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 1010;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-modal-content {
+  background-color: #1c1c1e;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cart-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #3a3a3c;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cart-modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #f5f5f7;
+}
+
+.cart-modal-close-btn {
+  background: none;
+  border: none;
+  color: #8e8e93;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.cart-modal-body {
+  overflow-y: auto;
+}
+
+.cart-empty-text {
+  color: #8e8e93;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.cart-items-list-modal {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item-modal {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #2c2c2e;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.cart-item-image-modal {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.cart-item-info-modal {
+  flex-grow: 1;
+}
+
+.cart-item-info-modal h4 {
+  margin: 0 0 5px 0;
+  color: #f5f5f7;
+}
+
+.cart-item-info-modal p {
+  margin: 0;
+  color: #8e8e93;
+}
+
+.cart-item-controls-modal {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cart-item-controls-modal button {
+  background-color: #3a3a3c;
+  color: #f5f5f7;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart-item-remove-modal {
+  background: none;
+  border: none;
+  color: #ff453a;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+.cart-total-modal {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #3a3a3c;
+  text-align: right;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #f5f5f7;
+}

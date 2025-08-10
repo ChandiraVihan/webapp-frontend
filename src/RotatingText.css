@@ -1,0 +1,46 @@
+.text-rotate {
+  display: flex;
+  flex-wrap: wrap;
+  white-space: pre-wrap;
+  align-items: center;
+  text-align: center;
+}
+
+.text-rotate-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  text-align: center;
+}
+
+.text-rotate-word {
+  display: inline-flex;
+  text-align: center;
+}
+
+.text-rotate-lines {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ text-align: center;
+}
+
+ .text-rotate-element {
+  display: inline-block;
+  text-align: center;
+}
+
+.text-rotate-space {
+  white-space: pre;
+  text-align: center;
+}
+
+.rotating-text-container {
+  text-align: center; /* <-- THIS LINE IS THE FINISHING TOUCH */
+}

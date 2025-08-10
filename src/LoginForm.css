@@ -1,0 +1,103 @@
+/* General Body and Background Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+}
+
+.background {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to right, #010030, #160078, #7226FF );
+  overflow: hidden;
+}
+
+/* 
+  --- THE KEY FIX IS HERE ---
+  This container now correctly centers its children and stacks them vertically.
+*/
+.login-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column; /* This is the critical line that stacks items vertically */
+  justify-content: center;
+  align-items: center;   /* This centers the items horizontally */
+  height: 100vh;
+  width: 100%;
+}
+
+/* Login Form Card */
+.login-form {
+  background-color: #EEA47F;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  width: 300px;
+  box-sizing: border-box; 
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-form input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #977DFF;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-form button:hover {
+  background-color: #000000;
+}
+
+/* The Sign-Up Box Styling */
+.signup-box {
+  width: 300px; /* Match the login form width */
+  box-sizing: border-box;
+  padding: 20px 30px;
+  margin-top: 20px; /* Space between the two boxes */
+  background-color: #CED46A; /* Same background */
+  border-radius: 12px; /* Same border radius */
+  box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Same shadow */
+  text-align: center;
+}
+
+.signup-box p {
+  margin: 0;
+  color: #333; 
+  font-size: 14px;
+}
+
+.signup-box a {
+  color: #0056b3; 
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-box a:hover {
+  text-decoration: underline;
+}
+
+
+
+

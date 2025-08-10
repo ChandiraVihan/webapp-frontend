@@ -1,0 +1,29 @@
+/* GradientText.css */
+.animated-gradient-text {
+  display: inline-block;
+  position: relative;
+}
+
+.text-content {
+  /* This is the key part */
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari/Chrome */
+  color: transparent;
+
+  /* Animation */
+  background-size: 200% 100%;
+  animation: gradient-animation linear infinite;
+}
+
+/* The animation keyframes */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

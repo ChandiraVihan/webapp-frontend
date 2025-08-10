@@ -1,0 +1,89 @@
+/* In HomePage.css */
+
+/* This container now acts as the full-page background and centers the card */
+.home-container {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('https://i.postimg.cc/66hwg21j/3395620.jpg');
+  background-size: cover;
+  background-position: center;
+  
+  /* These properties will center the 'content-card' in the middle of the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   perspective: 1500px;
+}
+
+/* This is the new container for your content */
+.content-card {
+  /* Visual styling for the card */
+  background: rgba(0, 0, 0, 0.00000000001); 
+  backdrop-filter: blur(10px);      /* Frosted glass effect */
+  border-radius: 20px;
+  padding: 30px 40px;               /* Add some internal spacing */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  /* Layout for the items inside the card (title, image, button) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; /* Creates consistent spacing between items */
+}
+
+/* Updated title styles for the card */
+.home-title {
+  font-size: 3.5rem; /* Adjusted for better fit inside the card */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  margin: 0; /* Remove previous margin, as 'gap' now handles spacing */
+}
+
+/* Image styles */
+.home-image {
+  width: 150px;
+  height: auto;
+  border-radius: 10px; /* Optional: gives the image soft corners */
+}
+
+/* Button styles (unchanged) */
+/* --- Button Styles --- */
+.get-started-btn {
+  /* Increased padding and font-size to make it bigger */
+  padding: 15px 160px;
+  font-size: 1.3rem; 
+  font-weight: bold; /* Make text stand out */
+
+  background-color: rgba(0, 0, 0, 0.1); /* Slightly darker background */
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Added a subtle border */
+  border-radius: 8px; /* Slightly larger radius */
+  cursor: pointer;
+
+  /* 
+    Corrected transition:
+    - We apply a smooth transition to multiple properties.
+    - It will take 0.3 seconds to change the background, shadow, and size.
+  */
+  transition: 
+    background-color 0.3s ease, 
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* --- Glow Effect on Hover --- */
+.get-started-btn:hover {
+  /* When hovering, we make the background slightly more opaque */
+  background-color: rgba(0, 0, 0, 0.6);
+
+  /* 
+    This creates the purple glow effect using box-shadow.
+    - Format: [horizontal-offset] [vertical-offset] [blur-radius] [spread-radius] [color]
+    - We use a vibrant purple with some transparency.
+  */
+  box-shadow: 0 0 15px 5px rgba(102, 18, 142, 0.7);
+
+  /* This makes the button pop out slightly on hover */
+  transform: scale(1.05);
+}

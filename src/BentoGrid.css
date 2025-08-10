@@ -1,0 +1,23 @@
+/* Example for a glowing effect in plain CSS */
+.bento-item { /* Or whatever your item class is */
+  position: relative;
+  border-radius: 12px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+.bento-item::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: conic-gradient(from 90deg at 40% -25%, #ffd700, #ff8c00, #ff0080, #7f00ff, #00bfff, #ffd700);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.bento-item:hover::before {
+  opacity: 1;
+}
